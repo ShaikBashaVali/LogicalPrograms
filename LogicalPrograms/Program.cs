@@ -15,8 +15,9 @@ namespace LogicalProblems
                 Console.WriteLine("-------LogicalProblems ------");
                 Console.WriteLine("Select the option");
                 Console.WriteLine("1.FibonacciSeries" + "\n" +
-                                   "2.PerfectNumber" + "\n" +
-                                   "3.Exit" + "\n");
+                                  "2.PerfectNumber" + "\n" +
+                                  "3.PrimeNumber" + "\n" +
+                                  "4.Exit" + "\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -31,6 +32,12 @@ namespace LogicalProblems
                         perfectNumber.Check(value);
                         break;
                     case 3:
+                        PrimeNumber primeNumber = new PrimeNumber();
+                        Console.WriteLine("Enter the Value to check Prime" + "\n\n");
+                        int value1 = Convert.ToInt32(Console.ReadLine());
+                        primeNumber.CheckPrime(value1);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
