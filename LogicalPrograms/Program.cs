@@ -14,10 +14,11 @@ namespace LogicalProblems
             {
                 Console.WriteLine("-------LogicalProblems ------");
                 Console.WriteLine("Select the option");
-                Console.WriteLine("1.FibonacciSeries" + "\n" +
-                                  "2.PerfectNumber" + "\n" +
-                                  "3.PrimeNumber" + "\n" +
-                                  "4.Exit" + "\n");
+                Console.WriteLine("1.FibonacciSeries " +
+                                  "\n2.PerfectNumber" +
+                                  "\n3.PrimeNumber " +
+                                  "\n4.ReverseNumber" +
+                                  "\n5.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -38,6 +39,12 @@ namespace LogicalProblems
                         primeNumber.CheckPrime(value1);
                         break;
                     case 4:
+                        ReverseNumber reverseNumber = new ReverseNumber();
+                        Console.WriteLine("Enter the Value to Reverse" + "\n\n");
+                        int value2 = Convert.ToInt32(Console.ReadLine());
+                        reverseNumber.Reverse(value2);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
